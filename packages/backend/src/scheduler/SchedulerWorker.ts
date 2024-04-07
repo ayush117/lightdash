@@ -33,7 +33,7 @@ const traceTask = (taskName: string, task: Task): Task => {
             `worker.task.${taskName}`,
             async (span) => {
                 const { job } = helpers;
-
+                console.log(">>>", job);
                 // TODO: have clearer types for payload
                 let organizationUuidAttribute = {};
                 if (
